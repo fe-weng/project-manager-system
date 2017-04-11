@@ -1,0 +1,75 @@
+$inputWidth : 200px;
+$inputDesWidth : 100px;
+@import "../../css/reset.scss";
+.login-view{
+    .login-container{
+        background : rgb(237, 238, 240);
+        width : 500px;
+        height: 300px;
+        margin : 200px auto;
+        .login-title{
+            background: rgb(220, 221, 205);
+            font-size : 28px;
+            letter-spacing: 3px;
+            padding : 10px;
+        }
+        .login-main{
+            padding : 10px;
+            .login-userName{
+                margin : 15px 0;
+                .userName-span{
+                    width: $inputDesWidth;
+                    display: inline-block;
+                }
+                .userName-input{
+                    width : $inputWidth;
+                    padding : 5px;
+                    -webkit-box-sizing: border-box;
+                    -moz-box-sizing: border-box;
+                    box-sizing: border-box;
+                }
+                .error-tip{
+                    margin-left : 10px;
+                    color : #ff124a;
+                }
+            }
+            .login-password{
+                margin : 15px 0;
+                .pwd-span{
+                    width: $inputDesWidth;
+                    display: inline-block;
+                }
+                .password-input{
+                    width : $inputWidth;
+                    padding : 5px;
+                    -webkit-box-sizing: border-box;
+                    -moz-box-sizing: border-box;
+                    box-sizing: border-box;
+                }
+                .error-tip{
+                    margin-left : 10px;
+                    color : #ff124a;
+                }
+            }
+            .loginIn-btn{
+                margin : 20px 100px;
+                width: $inputWidth;
+                padding : 10px;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+                background : rgb(255, 155, 0);
+                border-radius : 10px;
+                text-align: center;
+                color : #fff;
+                cursor: pointer;
+            }
+            .forget-pwd{
+                float : right;
+                margin-right: 200px;
+                cursor: pointer;
+                color : #666;
+            }
+        }
+    }
+}

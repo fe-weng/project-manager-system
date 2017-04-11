@@ -1,0 +1,184 @@
+@charset "utf-8";
+body,
+div,
+ul,
+li,
+h1,
+h2,
+h3,
+input,
+textarea,
+p,
+button,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+    list-style: none;
+    border : 0;
+
+}
+
+i,em,b,cite{
+    font-style: normal;
+}
+
+body {
+    font-family: 'Microsoft YaHei', 'PingHei', 'Lucida Grande', 'Lucida Sans Unicode', 'STHeiti', 'Helvetica', 'Arial', 'Verdana', 'sans-serif';
+    color: #121212;
+    font-size: 16px;
+    overflow-x: hidden;
+    /* 关闭字体自动调整大小 */
+    -webkit-text-size-adjust: none;
+    /* 滚动顺畅 */
+    -webkit-overflow-scrolling: touch;
+}
+//
+//@media screen and (max-width: 360px) {
+//    html {
+//        font-size: 14px;
+//    }
+//}
+//
+//@media screen and (min-width: 361px) and (max-width: 480px) {
+//    html {
+//        font-size: 16px;
+//    }
+//}
+//
+//@media screen and (min-width: 481px) and (max-width: 640px) {
+//    html {
+//        font-size: 18px;
+//    }
+//}
+//
+//@media screen and (min-width: 641px) and (max-width: 800px) {
+//    html {
+//        font-size: 20px;
+//    }
+//}
+//
+//@media screen and (min-width: 641px) and (max-width: 800px) {
+//    html {
+//        font-size: 20px;
+//    }
+//}
+//
+//@media screen and (min-width: 801px) {
+//    html {
+//        font-size: 22px;
+//    }
+//}
+
+a {
+    color: #7a7c80;
+    text-decoration: none;
+    /*display: inline-block;*/
+}
+
+input {
+    outline: none;
+    /*border-radius: 0;*/
+    /*background-color: inherit;*/
+    /*color: #7a7c80;*/
+    box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
+a,
+span,
+div,
+img {
+    /* 长按不要呼出默认菜单 */
+    -webkit-touch-callout: none;
+    /* 点击不要虚线框 */
+    -webkit-tap-highlight-color: transparent;
+    /* 不要选中文本 */
+    /*user-select: none;*/
+    /*-moz-user-select: -moz-none;*/
+    /*-webkit-user-select: none;*/
+    /*-ms-user-select: -ms-none;*/
+    /*-o-user-select: none;*/
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    border: 0;
+}
+
+.clear {
+    clear: both;
+    font-size: 0;
+    height: 0;
+}
+
+.border-box {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.txt-l {
+    text-align: left;
+}
+
+.txt-c {
+    text-align: center;
+}
+
+.txt-r {
+    text-align: right;
+}
+
+.fl-l {
+    float: left;
+}
+
+.fl-r {
+    float: right;
+}
+
+/* 超出的字体变省略号 */
+
+.textover {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.textover2 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    display: box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.word-wrap {
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.hidden {
+    display: none !important;
+}
