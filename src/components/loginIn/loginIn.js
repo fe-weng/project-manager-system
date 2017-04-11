@@ -3,8 +3,6 @@
  */
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-//import createBrowserHistroy from 'history/createBrowserHistory';
-import ProjectManage from '../projectManage/projectManage';
 
 require('./loginIn.scss');
 //const newHistroy = createBrowserHistroy();
@@ -74,8 +72,7 @@ class LoginIn extends Component{
         //TODO
         //没有建立本地服务器，之后在研究，直接跳转
         console.log(this.props.history);
-        //this.proop.router.push('/projectManage');
-        this.props.history.push('/ProjectManage');
+        this.props.history.push('/projectManageIndex',{ userName : this.state.userName, password : this.state.password });
     }
     handleForgetPwd(){
         //TODO

@@ -3,19 +3,27 @@
  */
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import {BrowserRouter as Router, Route, browserHistory, Switch} from 'react-router-dom';
-import createBrowserHistroy from 'history/createBrowserHistory';
+import {BrowserRouter as Router, Route, browserHistory} from 'react-router-dom';
+//import { Router, Route, hashHistory } from 'react-router';
+//import createBrowserHistroy from 'history/createBrowserHistory';
 import LoginIn from './components/loginIn/loginIn';
-import ProjectManage from './components/projectManage/projectManage';
+import ProjectManageIndex from './components/projectManageIndex/projectManageIndex';
 
 //const newHistroy = createBrowserHistroy();
+class App extends Component{
+    render(){
+        return(
+            <Router history={ browserHistory }>
+                <div>
+                    <Route path="/LoginIn" component={LoginIn}></Route>
+                    <Route path="/ProjectManageIndex" component={ProjectManageIndex}></Route>
+                </div>
+            </Router>
+        )
+    }
+};
 ReactDOM.render(
-        <Switch histroy={browserHistory}>
-            <div>
-                <Route path="/" component={LoginIn}></Route>
-                <Route path="/ProjectManage" component={ProjectManage}></Route>
-            </div>
-        </Switch>,
+      <App></App>,
     document.getElementById('container')
 )
 

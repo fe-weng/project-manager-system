@@ -2,6 +2,7 @@
     "presets" : ["es2015", "react", "babel-preset-stage-0"],
     "plugins" : [
         ["transform-class-properties", { "spec" : true}],
-        ["transform-decorators-legacy"]
+        ["transform-decorators-legacy"],
+        ["import", { libraryName : "antd", style : "css"}]
     ]
 }
