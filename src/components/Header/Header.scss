@@ -1,0 +1,30 @@
+$heightHeight : 80px;
+$IconWidth : 50px;
+$IconHeight : 50px;
+
+.header{
+    height: $heightHeight;
+    color : #fff;
+    background-color : rgb(53, 60, 76);
+    font-size: 24px;
+    line-height: $heightHeight;
+    .header-info{
+        display: inline-block;
+        margin-left : 30px;
+        i{
+            font-size : 40px;
+            vertical-align: middle;
+            margin-right : 20px;
+        }
+    }
+    .login-info{
+        float: right;
+        margin-right : 30px;
+        .userName{
+            margin-right : 30px;
+        }
+        i{
+            cursor : pointer;
+        }
+    }
+}
