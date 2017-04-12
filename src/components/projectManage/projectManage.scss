@@ -1,0 +1,60 @@
+$ftz : 18px;
+.project-manage-table{
+    margin : 10px 30px;
+    thead{
+        th{
+            background : rgb(83, 98, 117);
+            color : #fff;
+            text-align: center;
+            font-size: $ftz;
+        }
+        .project-manage-name{
+            background : rgb(50, 158, 132);
+        }
+    }
+    tbody{
+        td{
+            text-align: center;
+            font-size: $ftz;
+            .show-info, .show-task, .delete{
+                width: 25%;
+                display: inline-block;
+                border-radius : 30px;
+                padding : 5px 0;
+                margin: 0 10px;
+                cursor : pointer;
+            }
+            .show-info{
+                background : rgb(195, 237, 250);
+                color : rgb(72, 196, 237);
+            }
+            .show-task{
+                background : rgb(253,232, 203);
+                color : rgb(249, 184, 80);
+            }
+            .delete{
+                background : rgb(255,216, 216);
+                color : rgb(249, 135, 134);
+            }
+            .status-0{
+                color : rgb(247, 137, 136);
+                cursor: pointer;
+            }
+            .status-1{
+                color : rgb(251, 188, 103);
+                cursor: pointer;
+            }
+            .status-2{
+                color : rgb(60, 193, 238);
+                cursor: pointer;
+            }
+        }
+        .project-manage-name{
+            background: rgb(80, 224, 189);
+        }
+        .ant-progress-line{
+            width: 80%;
+            display: inline-block;
+        }
+    }
+}
