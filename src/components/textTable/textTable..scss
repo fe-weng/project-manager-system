@@ -1,6 +1,39 @@
 .project-manage-text-container{
-    display: inline-block;
+    //display: inline-block;
     width: 900px;
-    margin-left : 30px;
     font-size: 20px;
+    border-left : 1px solid #ddd;
+    border-right : 1px solid #ddd;
+    .title{
+        background : rgb(83, 98, 117);
+        height: 50px;
+        line-height: 50px;
+        color: #FFFFFF;
+        .title-info{
+            display: inline-block;
+            width: 200px;
+            background : rgb(50, 158, 132);
+            text-align: center;
+        }
+        .more-icon-container{
+            float : right;
+            font-size: 30px;
+            width: 50px;
+            text-align: center;
+            background: rgb(92, 109, 137);
+        }
+    }
+    .news-list{
+        .news-each-li{
+            border-bottom : 1px solid #ddd;
+            padding : 10px 25px;
+            overflow: hidden;
+            -ms-text-overflow: ellipsis;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+    }
+}
+.col-blue{
+    color : #0b97c4;
 }

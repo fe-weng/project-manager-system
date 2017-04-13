@@ -2,9 +2,10 @@
  * Created by 51212 on 2017/4/10.
  */
 import React, { Component } from 'react';
-import { Table, Progress } from 'antd';
+import { Table, Progress, Modal, Icon } from 'antd';
 
 const statusList = ["最新", "进行中", "完成"];
+const priorityList = ["待定", "普通", "紧急"]
 require('./projectManage.scss');
 class ProjectManage extends Component{
     constructor(props){
@@ -55,7 +56,7 @@ class ProjectManage extends Component{
             width : "5%",
             render : (text, record, index) => {
                 const className = "status-" + text.status;
-                return <span className={className}>{statusList[text.status]}</span>
+                return <span className={className} onClick={ () => this.showStatus(text)}>{statusList[text.status]}</span>
             }
         },{
             title : "操作",
@@ -70,17 +71,87 @@ class ProjectManage extends Component{
             width : "25%"
         }];
         this.state = {
-            pagination : true,
-            bordered : true,
-            dataSource : projectData,
-            columns : columns,
-            className : 'project-manage-table'
-        }
+            table : {
+                pagination : true,
+                bordered : true,
+                dataSource : projectData,
+                columns : columns,
+                className : 'project-manage-table'
+            }
+        };
+    }
+    showStatus(text){
+        this.setState({
+           statusModal : {
+                showModal : true,
+                params : text
+           }
+        })
     }
     render(){
         return (
-            <Table { ...this.state } />
+            <div>
+                <Table { ...this.state.table } />
+                <StatusModal {...this.state.statusModal}></StatusModal>
+            </div>
         )
     }
 }
+class StatusModal extends Component{
+    static defaultProps = {
+        showModal : false
+    };
+    constructor(props){
+        super(props);
+        this.state = {
+            showModal : this.props.showModal,
+            params : this.props.params
+        };
+    }
+    componentWillReceiveProps(nextProps){
+        this.setState ({
+            showModal : nextProps.showModal,
+            params : nextProps.params
+        });
+    }
+    render(){
+        const showModal = this.state.showModal;
+        if(showModal){
+            return(
+                <div className="showModal">
+                    <div className="showModal-container">
+                        <div className="title-container">
+                            <span className="title">{this.state.params.name}</span>
+                            <Icon type="close" className="fl-r close-btn"/>
+                        </div>
+                        <ul className="modal-list">
+                            <li className="modal-each-li">负责人：{this.state.params.principal}</li>
+                            <li className="modal-each-li">状态：{statusList[this.state.params.status]}</li>
+                            <li className="modal-each-li">计划开始时间：{ this.state.params.plan_start_time }</li>
+                            <li className="modal-each-li">计划完成时间：{ this.state.params.plan_end_time }</li>
+                            <li className="modal-each-li">实际开始时间：{ this.state.params.actual_start_time }</li>
+                            <li className="modal-each-li">实际结束时间：{ this.state.params.actual_end_time }</li>
+                            <li className="modal-each-li">优先级：{ priorityList[this.state.params.priority] }</li>
+                            <li className="modal-each-li">预计耗时：{ this.state.params.plan_duration }天</li>
+                            <li className="modal-each-li">进度：{ progress(this.state.params.progress) }</li>
+                            <li className="modal-each-li partner-li">配合人：{ this.state.params.partner.join(', ')}</li>
+                        </ul>
+                    </div>
+                </div>
+            )
+        }else{
+            return null
+        }
+    }
+}
 export default ProjectManage;
+
+const progress = (progress) => {
+        let percent;
+        if(progress.indexOf('%') > -1){
+            percent = Number(progress.slice(0, progress.indexOf('%')));
+        }else{
+            percent = Number(text.progress);
+        }
+    return <div><Progress type="line" percent={percent} showInfo={false} strokeWidth={20}/> {percent}%</div>
+};

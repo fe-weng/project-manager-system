@@ -7,9 +7,6 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 require('./loginIn.scss');
 //const newHistroy = createBrowserHistroy();
 class LoginIn extends Component{
-    static contextTypes : {
-        router : React.PropTypes.object
-    }
     constructor(props){
         super(props);
         this.state = {
@@ -72,6 +69,7 @@ class LoginIn extends Component{
         //TODO
         //没有建立本地服务器，之后在研究，直接跳转
         console.log(this.props.history);
+        //console.log(this.Context.router);
         this.props.history.push('/projectManageIndex',{ userName : this.state.userName, password : this.state.password });
     }
     handleForgetPwd(){

@@ -29,3 +29,11 @@
         }
     }
 }
+.pd30{
+    padding : 0 30px;
+}
+.clear-both:after{
+    display: block;
+    clear : both;
+    content : '';
+}
