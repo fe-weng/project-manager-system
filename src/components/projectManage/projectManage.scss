@@ -96,8 +96,18 @@ $ftz : 18px;
                 display: inline-block;
                 width: 330px;
                 margin : 10px 20px;
+                .progress-container{
+                    display: inline-block;
+                    width: 270px;
+                }
                 .ant-progress{
-
+                    position: relative;
+                    top : -5px;
+                    display: inline-block;
+                    width: 200px;
+                }
+                &.partner-li{
+                    display: block;
                 }
             }
         }

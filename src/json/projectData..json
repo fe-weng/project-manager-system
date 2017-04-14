@@ -11,7 +11,8 @@
         "status" : "2",
         "priority" : "1",
         "partner" : ["张三", "李四", "王五"],
-        "key" : "a"
+        "key" : "a",
+        "projectId" : "1e2afas"
     }, {
         "name" : "富山项目",
         "principal" : "张振林",
@@ -24,7 +25,8 @@
         "status" : "1",
         "priority" : "1",
         "partner" : ["张三", "李四", "王五"],
-        "key" : "b"
+        "key" : "b",
+        "projectId" : "1e2afab"
     }, {
         "name" : "牲畜无害化项目",
         "principal" : "张振林",
@@ -37,7 +39,8 @@
         "status" : "2",
         "priority" : "1",
         "partner" : ["张三", "李四", "王五"],
-        "key" : "c"
+        "key" : "c",
+        "projectId" : "1e2afds"
     }, {
         "name" : "海鸥项目",
         "principal" : "张振林",
@@ -50,6 +53,7 @@
         "status" : "0",
         "priority" : "1",
         "partner" : ["张三", "李四", "王五"],
-        "key" : "d"
+        "key" : "d",
+        "projectId" : "1e2aaas"
     }
 ]

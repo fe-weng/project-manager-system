@@ -63,7 +63,7 @@ class ProjectManage extends Component{
             key : "action",
             render : (text, record, index) => (
                 <span>
-                    <span className="show-info">查看信息</span>
+                    <span className="show-info" onClick={ () => this.showInfo(text)}>查看信息</span>
                     <span className="show-task">分配任务</span>
                     <span className="delete">删除</span>
                 </span>
@@ -107,12 +107,19 @@ class StatusModal extends Component{
             showModal : this.props.showModal,
             params : this.props.params
         };
+        this.handleClose = this.handleClose.bind(this);
     }
     componentWillReceiveProps(nextProps){
         this.setState ({
             showModal : nextProps.showModal,
             params : nextProps.params
         });
+    }
+    handleClose(){
+        this.setState({
+            showModal : false,
+            params : {}
+        })
     }
     render(){
         const showModal = this.state.showModal;
@@ -122,11 +129,11 @@ class StatusModal extends Component{
                     <div className="showModal-container">
                         <div className="title-container">
                             <span className="title">{this.state.params.name}</span>
-                            <Icon type="close" className="fl-r close-btn"/>
+                            <Icon type="close" className="fl-r close-btn" onClick={this.handleClose}/>
                         </div>
                         <ul className="modal-list">
                             <li className="modal-each-li">负责人：{this.state.params.principal}</li>
-                            <li className="modal-each-li">状态：{statusList[this.state.params.status]}</li>
+                            <li className="modal-each-li">状态：<span className="col-blue">{statusList[this.state.params.status]}</span></li>
                             <li className="modal-each-li">计划开始时间：{ this.state.params.plan_start_time }</li>
                             <li className="modal-each-li">计划完成时间：{ this.state.params.plan_end_time }</li>
                             <li className="modal-each-li">实际开始时间：{ this.state.params.actual_start_time }</li>
@@ -151,7 +158,7 @@ const progress = (progress) => {
         if(progress.indexOf('%') > -1){
             percent = Number(progress.slice(0, progress.indexOf('%')));
         }else{
-            percent = Number(text.progress);
+            percent = Number(progress);
         }
-    return <div><Progress type="line" percent={percent} showInfo={false} strokeWidth={20}/> {percent}%</div>
+    return <div className="progress-container"><Progress type="line" percent={percent} showInfo={false} strokeWidth={20}/> {percent}%</div>
 };

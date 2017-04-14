@@ -7,7 +7,7 @@ import Header from '../Header/Header';
 import ProjectManage from '../projectManage/projectManage';
 import TextTable from '../textTable/textTable';
 import { Icon, Tabs } from 'antd';
-//import TabExtraContent from '../TabExtraContent/TabExtraContent';
+
 require('./projectManageIndex.scss');
 const TabPane = Tabs.TabPane;
 
