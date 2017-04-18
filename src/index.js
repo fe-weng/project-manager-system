@@ -15,7 +15,7 @@ class App extends Component{
         return(
             <Router history={ browserHistory }>
                 <div>
-                    <Route path="/LoginIn" component={LoginIn}></Route>
+                    <Route exact path="/" component={LoginIn}></Route>
                     <Route path="/ProjectManageIndex" component={ProjectManageIndex}></Route>
                 </div>
             </Router>
@@ -25,7 +25,7 @@ class App extends Component{
 ReactDOM.render(
       <App></App>,
     document.getElementById('container')
-)
+);
 
 //ReactDOM.render(
 //    <LoginIn></LoginIn>,

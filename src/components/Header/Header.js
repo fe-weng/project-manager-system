@@ -18,7 +18,7 @@ class Header extends Component{
         LoginOutConfirm({
             title : "确定要推出登录么？",
             onOk(){
-                _this.props.history.push('/LoginIn')
+                _this.props.history.push('/')
             },
             onCancel(){
                 console.log('cancel');
