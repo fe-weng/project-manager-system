@@ -17,7 +17,7 @@ class App extends Component{
                 <div>
                     <Route exact path="/" component={LoginIn}></Route>
                     <Route path="/ProjectManageIndex" component={ProjectManageIndex}></Route>
-                </div>
+            </div>
             </Router>
         )
     }

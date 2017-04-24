@@ -3,6 +3,7 @@
  */
 import React, { Component } from 'react';
 import { Table, Progress, Modal, Icon } from 'antd';
+import { Link } from 'react-router-dom';
 
 const statusList = ["最新", "进行中", "完成"];
 const priorityList = ["待定", "普通", "紧急"]
@@ -63,7 +64,7 @@ class ProjectManage extends Component{
             key : "action",
             render : (text, record, index) => (
                 <span>
-                    <span className="show-info" onClick={ () => this.showInfo(text)}>查看信息</span>
+                    <Link className="show-info" to="/projectManageIndex/projectInfo">查看信息</Link>
                     <span className="show-task">分配任务</span>
                     <span className="delete">删除</span>
                 </span>
