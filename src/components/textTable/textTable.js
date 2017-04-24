@@ -6,7 +6,9 @@ import { Icon, Popover } from 'antd';
 
 require('./textTable..scss');
 
-const textList = ['最新动态', '任务提醒'];
+var configParams = require('../../json/config.json');
+const { textList } = configParams;
+//const textList = ['最新动态', '任务提醒'];
 class TextTable extends Component{
     constructor(props){
         super(props);

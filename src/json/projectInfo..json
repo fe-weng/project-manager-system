@@ -1,0 +1,32 @@
+{
+    "name" : "官网项目",
+    "projectNum" : "01",
+    "principal" : "张振林",
+    "plan_start_time" : "2016-05-01",
+    "plan_end_time" : "2016-09-01",
+    "plan_duration" : "120",
+    "actual_start_time" : "2016-05-01",
+    "actual_end_time" : "2016-09-01",
+    "progress" : "100%",
+    "status" : "2",
+    "priority" : "1",
+    "partner" : ["张三", "李四", "王五"],
+    "key" : "a",
+    "projectId" : "1e2afas",
+    "project_des" : "本项目是用来练手的，所以很多地方没有处理，比如这里文字处理,就没有做文本框是否能显示全的处理",
+    "history_log" : [
+        {
+            "time" : "1476144030000",
+            "des" : "张海山登录系统成功"
+        },{
+            "time" : "1476144020000",
+            "des" : "官网项目成功发布"
+        },{
+            "time" : "1476144010000",
+            "des" : "郑爽更新日志"
+        },{
+            "time" : "1476144000000",
+            "des" : "张海山更新日志"
+        }
+    ]
+}
