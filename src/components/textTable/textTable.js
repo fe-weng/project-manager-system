@@ -8,21 +8,21 @@ require('./textTable..scss');
 
 var configParams = require('../../json/config.json');
 const { textList } = configParams;
-//const textList = ['最新动态', '任务提醒'];
+//const textList = ['最新动态', '任务提醒', "历史记录", "附件记录"];
 class TextTable extends Component{
     constructor(props){
         super(props);
         this.getLists = this.getLists.bind(this);
     }
     getLists(){
-        if(this.props.textStyle == 0){
+        if(this.props.textStyle == 0 || this.props.textStyle == 2){//最新动态 历史记录
             let lists = this.props.lastestNews;
             return lists.map( (item, index ) => {
                 return (
                     <li className="news-each-li" key={item.time}>{ formatDate(item.time) } {item.des}</li>
                 )
             })
-        }else if(this.props.textStyle == 1){
+        }else if(this.props.textStyle == 1){// 任务提醒
             let lists = this.props.taskData;
             console.log(lists);
             return lists.map( (item, index) => {
@@ -32,6 +32,8 @@ class TextTable extends Component{
                     </li>
                 )
             })
+        }else if(this.props.textStyle === 3){
+
         }
     }
     render(){
